@@ -21,7 +21,7 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => $text.'\n replytoken = '.$replyToken.'\n JSON Request = '.$json_string
+				'text' => $text.' replytoken = '.$replyToken.' JSON Request = '.$json_string
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
