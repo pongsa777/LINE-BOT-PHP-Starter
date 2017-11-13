@@ -15,13 +15,13 @@ if (!is_null($events['events'])) {
 			$text = $event['message']['text'];
 			// Get replyToken
             $replyToken = $event['replyToken'];
-            //Get UserId
-            $userId = $event['userid'];
+            //get json webhook
+            $json_string = json_encode($content, JSON_PRETTY_PRINT);
 
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => $text.' replytoken = '.$replyToken.' userID = '.$userId
+				'text' => $text.'\n replytoken = '.$replyToken.'\n JSON Request = '.$json_string
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
